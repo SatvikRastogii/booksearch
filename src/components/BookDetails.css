@@ -1,0 +1,227 @@
+.book-details-container {
+  padding: 3rem 2rem;
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 1.125rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.back-link:hover {
+  color: var(--primary-color);
+  background-color: rgba(99, 102, 241, 0.05);
+  transform: translateX(-4px);
+}
+
+.book-details-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.book-details-image-container {
+  width: 100%;
+}
+
+.book-details-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.book-rating {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  --star-size: 24px;
+  --star-color: #e5e7eb;
+  --star-background: #fbbf24;
+  
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  
+  background: linear-gradient(90deg, 
+    var(--star-background) calc(var(--rating) * 20%), 
+    var(--star-color) calc(var(--rating) * 20%)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.book-details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.book-details-title {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.book-details-subtitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 400;
+}
+
+.book-details-author {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.book-details-categories {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.category-tag {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+.book-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  background: rgba(99, 102, 241, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.meta-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.meta-value {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.book-details-description {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.book-details-description h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.book-details-description p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.125rem;
+  color: #7f8c8d;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+@media (max-width: 968px) {
+  .book-details-content {
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .book-details-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-details-container {
+    padding: 1rem;
+  }
+
+  .book-details-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .book-details-image-container {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .book-details-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .book-details-author,
+  .book-details-meta {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-details-content {
+    padding: 1rem;
+  }
+
+  .book-details-title {
+    font-size: 1.25rem;
+  }
+
+  .book-details-image-container {
+    max-width: 200px;
+  }
+}
+
